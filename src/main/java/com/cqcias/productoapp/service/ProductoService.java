@@ -24,9 +24,10 @@ public class ProductoService {
         return productoRepository.findAll();
     }
 
-    public List<Producto> listarActivos(String estatus) {
+    public List<Producto> listarActivos() {
         return productoRepository.findByEstatus("A");
     }
+    
 
     public Producto guardar(Producto producto) {
         return productoRepository.save(producto);
