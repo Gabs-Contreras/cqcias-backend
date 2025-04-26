@@ -5,6 +5,7 @@
 package com.cqcias.productoapp.repository;
 
 import com.cqcias.productoapp.model.Producto;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -12,5 +13,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Gaby_Contreras
  */
 public interface ProductoRepository extends JpaRepository <Producto, Long> {
+     List<Producto> findByEstatus(String estatus);
     
 }
